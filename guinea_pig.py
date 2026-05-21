@@ -81,3 +81,6 @@ if __name__ == '__main__':
             if response.lower() == pet.name.lower() and customer.budget >= pet.price:
                 print(f'congratulations you\'ve adopted {pet.name} for {pet.price}!')
                 customer.budget -= pet.price
+                for pet in pets:
+                    if pet.name.lower() == response.lower():
+                        pets.remove(pet)
